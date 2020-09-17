@@ -1,2 +1,2 @@
 export PYTHONPATH=$HOME/ml-basics
-conda activate ./conda-env
+powershell.exe /c conda.bat activate ./conda-env
