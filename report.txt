@@ -1,0 +1,24 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 1 files
+Detected 0 issues that require attention
+--------------------------------------------------------------------------------
+================================================================================
+Detailed log follows:
+
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'tf_two_layer_net.py'
+ outputting to 'tf_two_layer_net_v2.py'
+--------------------------------------------------------------------------------
+
+12:4: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+13:4: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+17:17: INFO: Renamed 'tf.random_normal' to 'tf.random.normal'
+18:17: INFO: Renamed 'tf.random_normal' to 'tf.random.normal'
+28:7: INFO: Added keywords to args of function 'tf.reduce_sum'
+31:19: INFO: Added keywords to args of function 'tf.gradients'
+44:5: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+46:13: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+--------------------------------------------------------------------------------
+
