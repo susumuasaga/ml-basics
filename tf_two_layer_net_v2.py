@@ -1,4 +1,5 @@
 import tensorflow as tf
+from tensorflow.compat import v1
 import numpy as np
 
 # First we set up the computational graph:
@@ -9,8 +10,8 @@ N, D_in, H, D_out = 64, 1000, 100, 10
 
 # Create placeholders for the input and target data; these will be filled
 # with real data when we execute the graph.
-x = tf.compat.v1.placeholder(tf.float32, shape=(None, D_in))
-y = tf.compat.v1.placeholder(tf.float32, shape=(None, D_out))
+x = v1.placeholder(tf.float32, shape=(None, D_in))
+y = v1.placeholder(tf.float32, shape=(None, D_out))
 
 # Create Variables for the weights and initialize them with random data.
 # A TensorFlow Variable persists its value across executions of the graph.
@@ -41,9 +42,9 @@ new_w2 = w2.assign(w2 - learning_rate * grad_w2)
 
 # Now we have built our computational graph, so we enter a TensorFlow session to
 # actually execute the graph.
-with tf.compat.v1.Session() as sess:
+with v1.Session() as sess:
     # Run the graph once to initialize the Variables w1 and w2.
-    sess.run(tf.compat.v1.global_variables_initializer())
+    sess.run(v1.global_variables_initializer())
 
     # Create numpy arrays holding the actual data for the inputs x and targets
     # y
